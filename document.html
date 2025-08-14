@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="Script.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1 class="title" class="hover">clicker game project</h1>
+    </div>
+    <body class="play">
+      <label for="themes">Themes:</label>
+      <select class="themeDrop themes" name="themes">
+        <option value="normal">normal</option>
+        <option value="cat">cat</option>
+      </select>
+      <div class="main"><span class="dot main" onclick="buttonClicked(), bounce(), jackBlack()"></span></div>
+      <div class="main goldText">Gold: 0</div>
+      <div class="main multText">Mult: 1</div>
+      <div class="main expoText">Expo: 1</div>
+      <img class="image" src="https://assets.onecompiler.app/43e7ww9ut/43e7wwj2z/photo-1529778873920-4da4926a72c2.jpeg">
+    </body>
+    <hr>
+      <fieldset>
+        <legend class="largeText">upgrades!</legend>
+        <div class="upgrade1"><button class="upgradeButton" onmousedown="upgrade1Down()" onmouseup="upgrade1Up()" onclick="buyUpgrade1()">add upgrade</button><p class="upgrade1Text fancy">increases multiplier on click costs: 10 gold</p></div>
+        <div class="upgrade2"><button class="upgradeButton2" onmousedown="upgrade2Down()" onmouseup="upgrade2Up()" onclick="buyUpgrade2()">add upgrade</button><p class="upgrade2Text fancy">increases exponent on click costs: 1000 gold</p></div>
+        <div class="upgrade3"><button class="upgradeButton3" onmousedown="upgrade3Down()" onmouseup="upgrade3Up()" onclick="buyUpgrade3()">add upgrade</button><p class="upgrade3Text fancy">buy auto clicker costs: 100 gold</p></div>
+        <div><button onclick="cheat()">cheat</button></div>
+      </fieldset>
+  </body>
+</html

@@ -1,0 +1,62 @@
+To define a variable 
+  let “variable name” 
+Can be a variety of things such as a string or a bool 
+If not given a value base value is undefined 
+To print to console use 
+  console.log()
+ .repeat() is used to repeat a variable a certain number of times 
+
+Functions define “local” Variables that only work within a function call and then when the function is called you define the variables to see the result of the code. Its beginning to click but its strange the return at the end of function determines what gets output when the function is called also stops any code after it from being called 
+
+Pyramid generator script
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+ return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+for (let i = 1; i <= count; i++) {
+ if (inverted) {
+   rows.unshift(padRow(i, count));
+ } else {
+   rows.push(padRow(i, count));
+ }
+}
+
+while (rows.length < count) {
+ rows.push(padRow(rows.length + 1, count));
+}
+
+for (let i = count; i > 0; i--) {
+ rows.push(padRow(i, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+ result = result + row + "\n";
+}
+
+console.log(result);
+
+
+
+A function that uses a for loop to get the average of an array 
+	for(initialization, condition, update) 
+		initialization: This expression is executed only once before the loop starts. It is typically used to declare and initialize a counter variable. 
+condition: This expression is evaluated before each iteration. If it evaluates to true, the loop body is executed. If it evaluates to false, the loop terminates.
+update: This expression is executed after each iteration. It is typically used to increment or decrement the counter variable
+
+function getAverage(scores) {
+ let sum = 0
+ for (let i = 0; i < scores.length; i++) {
+   sum += scores[i];
+ }
+ return sum / scores.length
+}
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
